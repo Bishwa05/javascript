@@ -4,9 +4,9 @@ function name( fullname )
 }
 
 // Where there are objects...
-var name1 = { firstname: "Lawrence", lastname: "Turton"  };
+var name1 = { firstname: "Hi", lastname: "Guruji"  };
 
-const name2 = { firstname: "John", lastname: "Doe"  };
+const name2 = { firstname: "Mr", lastname: "John"  };
 
 console.log(
     name( name1 ),
@@ -19,11 +19,20 @@ function embed( run )
     return run();
 }
 
-var name3 = function() { return "John Lock"  };
+var name3 = function() { return "Sachin Tendulkar"  };
 
-const name4 = function() { return "Stephanie Lock" };
+const name4 = function() { return "Callable TEST" };
 
 console.log(
     embed( name3 ),
     embed( name4 )
+);
+
+function test( testname )
+{
+    return "Hello " + testname();
+}
+
+console.log(
+    test( function(){ return "Test Name Bishwa : "} )
 );
